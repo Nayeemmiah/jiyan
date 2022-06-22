@@ -1,0 +1,140 @@
+.underline {
+    border-top: 5px solid #CCCCCC;
+    width: 8%;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+.service-feature-part {
+    transition: .5s;
+}
+
+.service-feature-part:hover {
+    transform: scale(1.02);
+}
+
+@keyframes growProgressBars {
+
+    0%,
+    33% {
+        --pgPercentage: 0;
+    }
+
+    100% {
+        --pgPercentage: var(--value);
+    }
+}
+
+@property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+}
+
+div[role="progressbar"] {
+    --size: 8rem;
+    --fg: #30BAE7;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBars 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+        conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+}
+
+
+
+
+@keyframes growProgressBars {
+
+    0%,
+    33% {
+        --pgPercentage: 0;
+    }
+
+    100% {
+        --pgPercentage: var(--value);
+    }
+}
+
+@property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+}
+
+div[role="progressbar1"] {
+    --size: 8rem;
+    --fg: #df1616;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBars 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+        conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+}
+
+div[role="progressbar1"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+}
+
+
+
+
+
+
+
+.bgs {
+    background-image: url("../img/new1.jpg");
+    background-size: cover;
+}
+
+.bg-info-c {
+    background-color: #95836bbf !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background: #007b5e !important;
+}
